@@ -1,24 +1,44 @@
+
 html {
-    background-color:  #F5F5F5;
-    height: 100%;
+  background-color:  #F5F5F5;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 5px solid #800020;
 }
+
 
 
 /* Mobile styles */
 @media (max-width: 768px) {
     header {
       padding: 20px;
+      color: #006400;
     }
+    .main-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  
     .main-header h1 {
       font-size: 1.5rem;
       margin: 0;
+      margin-top: 10px;
+    }
+  
+    .fa-hospital {
+      font-size: 2rem;
     }
 
     .hero-pic img {
       display: block;
       max-width: 100%;
       height: auto;
-      margin: 0 auto;
+      margin: 10px auto;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     }
     
     .nav-links {
@@ -44,7 +64,7 @@ html {
       display: block;
       padding: 10px;
       text-align: center;
-      color: #333;
+      color: #006400;
       font-size: 1.2rem;
     }
 
@@ -70,16 +90,30 @@ html {
     justify-content: center;
     align-items: center;
     padding: 20px;
+    color: #006400;
   }
   .main-header {
-    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
+  
+  .main-header h1 {
+    margin-right: 10px; /* Optional spacing between the icon and text */
+  }
+  
+  .fa-hospital {
+    font-size: 2rem;
+  }
+  
 
   .hero-pic img {
     display: block;
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
   
   .nav-links {
@@ -89,14 +123,14 @@ html {
     align-items: center;
   }
   .nav-links li {
-    margin: 10px 20px;
+    margin: 0px 20px;
   }
   .nav-links a {
     display: block;
     padding: 10px;
     text-align: center;
-    color: blueviolet;
-    font-size: 1.2rem;
+    color: #006400;
+    font-size: 1rem;
     transition: background-color 0.2s ease-in-out;
   }
   
