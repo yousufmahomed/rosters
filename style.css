@@ -1,0 +1,125 @@
+html {
+    background-color:  #F5F5F5;
+    height: 100%;
+}
+
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    header {
+      padding: 20px;
+    }
+    .main-header h1 {
+      font-size: 1.5rem;
+      margin: 0;
+    }
+
+    .hero-pic img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto;
+    }
+    
+    .nav-links {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 40px;
+      width: 100%;
+      background-color: transparent;
+      z-index: 1;
+      align-items: flex-start; /* or 'center' */
+    }
+    
+
+    .nav-links li {
+      display: block;
+    }
+    .nav-links.show {
+      display: flex;
+      flex-direction: column;
+    }
+      .nav-links a {
+      display: block;
+      padding: 10px;
+      text-align: center;
+      color: #333;
+      font-size: 1.2rem;
+    }
+
+    .nav-links a:hover {
+      background-color: #f1f1f1;
+      color: orangered;
+    }
+    .menu-icon {
+      display: block;
+      font-size: 2rem;
+      color: #fff;
+      text-align: right;
+      cursor: pointer;
+      padding: 20px;
+    }
+  }
+  
+ /* Desktop styles */
+@media (min-width: 769px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  .main-header {
+    margin-bottom: 20px;
+  }
+
+  .hero-pic img {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav-links li {
+    margin: 10px 20px;
+  }
+  .nav-links a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    color: blueviolet;
+    font-size: 1.2rem;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .nav-links a:hover {
+    background-color: #f1f1f1;
+    color: orangered;
+  }
+  
+  .active {
+    text-decoration: underline;
+  }
+  .menu-icon {
+    display: none;
+  }
+}
+
+  
+  /* Shared styles */
+  nav {
+    position: relative;
+  }
+  
+  .menu-icon {
+    display: none;
+  }
+  
