@@ -2,6 +2,7 @@
 @media (min-width: 769px) {
   .main-header {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 20px;
@@ -23,10 +24,30 @@
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   }
-  .hero-pic h2 {
+  .hero-pic  {
     margin-top: 20px;
     font-size: 1.5rem;
     font-weight: bold;
+  }
+  label {
+    background-color: #800000;
+    color: #f1f1f1;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 1rem;
+  }
+  
+  input[type="text"] {
+    border: none;
+    border-bottom: 2px solid black;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    padding: 0.25rem;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: transparent;
   }
   table {
     margin-top: 50px;
@@ -90,10 +111,27 @@
     font-size: 1.2rem;
     font-weight: bold;
   }
-  h2 {
+  label {
     background-color: #800000;
     color: #f1f1f1;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 1rem;
   }
+  
+  input[type="text"] {
+    border: none;
+    border-bottom: 2px solid black;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    padding: 0.25rem;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: transparent;
+  }
+  
   table {
     margin:20px 0;
     width: 100%;
@@ -123,5 +161,6 @@
     box-sizing: border-box;
     padding: 5px;
     color: red;
-  }
+    word-wrap: break-word;
+}
 }
