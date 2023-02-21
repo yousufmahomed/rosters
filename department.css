@@ -1,3 +1,10 @@
+body {
+    background-color:  #F5F5F5;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 5px solid #800020;
+  }
 /* Desktop styles */
 @media (min-width: 769px) {
   .main-header {
@@ -13,6 +20,16 @@
     font-size: 2rem;
     margin: 0;
   }
+  .icon-link{
+    size: 1.5rem;
+    color: #f1f1f1;
+  }
+  .icon-link:hover {
+    background-color: blue;
+    color: orangered;
+  }
+  
+ 
   .hero-pic {
     margin-top: 50px;
     text-align: center;
@@ -65,7 +82,7 @@
     color: #fff;
   }
   tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: lightpink;
   }
   input[type="text"] {
     color: red;
@@ -94,6 +111,14 @@
     text-align: center;
     font-size: 1.5rem;
     padding-bottom: 10px;
+  }
+  .icon-link{
+    size: 1.5rem;
+    color: #f1f1f1;
+  }
+  .icon-link:hover {
+    background-color: blue;
+    color: orangered;
   }
 
   .hero-pic {
