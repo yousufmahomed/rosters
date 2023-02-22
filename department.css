@@ -4,6 +4,8 @@ body {
     margin: 0;
     padding: 0;
     border: 5px solid #800020;
+   
+
   }
 /* Desktop styles */
 @media (min-width: 769px) {
@@ -91,6 +93,9 @@ body {
     border: none;
     border-radius: 4px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  .urology {
+    width: 100%;
   }
 }
 
@@ -188,4 +193,14 @@ body {
     color: red;
     word-wrap: break-word;
 }
+.urology {
+  background-color: black;
+  color: white;
+  font-family: serif;
+  text-align: center;
+  padding: 20px;
+  margin: auto;
+  width: 80%;
+}
+
 }
