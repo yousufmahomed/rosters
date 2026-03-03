@@ -144,3 +144,62 @@ footer {
     .main-header h1 { font-size: 1.2rem; }
     .hero-pic img { height: 150px; }
 }
+
+.search-container {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.search-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+}
+
+.search-wrapper i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+#deptSearch {
+    width: 100%;
+    padding: 12px 12px 12px 40px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.dept-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.2s;
+}
+
+.dept-card i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.emergency-card {
+    border: 2px solid #B22222;
+    color: #B22222;
+}
+
+.call-btn {
+    display: inline-block;
+    background: #800020;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin: 10px;
+    font-weight: bold;
+}
