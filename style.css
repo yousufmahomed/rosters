@@ -1,39 +1,69 @@
+/* =========================================
+   1. THEME VARIABLES (Light & Dark)
+   ========================================= */
 :root {
-    /* Fixed Names */
-    --primary-maroon: #800020;
-    --white: #ffffff;
-    --bg-light: #f8f9fa;
-    --text-dark: #2d3436;
-    --accent-grey: #e9ecef;
-    --emergency: #d32f2f;
-    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    /* Light Mode Colors */
+    --bg-color: #f4f4f4;
+    --text-color: #333333;
+    --card-bg: #ffffff;
+    --header-bg: #800020; /* Your Maroon */
+    --header-text: #ffffff;
+    --accent-color: #800020;
+    --border-color: #dddddd;
+    --table-stripe: #f9f9f9;
+    --emergency: #B22222;
+    --shadow: 0 4px 6px rgba(0,0,0,0.1);
     --transition: all 0.3s ease;
 }
 
+[data-theme="dark"] {
+    /* Dark Mode Colors */
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --card-bg: #1e1e1e;
+    --header-bg: #000000;
+    --header-text: #ffffff;
+    --accent-color: #ff4d4d; /* Brighter red for dark mode contrast */
+    --border-color: #333333;
+    --table-stripe: #1a1a1a;
+    --shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+/* =========================================
+   2. GLOBAL STYLES
+   ========================================= */
 body {
-    background-color: var(--bg-light);
-    color: var(--text-dark);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     margin: 0;
-    padding: 0;
-    border: 5px solid var(--primary-maroon);
-    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: var(--transition);
+    line-height: 1.6;
 }
 
-/* 2. HEADER & HERO */
-header {
-    text-align: center;
-    padding: 20px;
+h1, h2, h3 {
+    color: var(--accent-color);
+    transition: var(--transition);
 }
 
+/* =========================================
+   3. HEADER & HERO SECTION
+   ========================================= */
 .main-header {
-    background-color: var(--primary-maroon); /* Fixed variable name */
-    color: var(--white);
+    background-color: var(--header-bg);
+    color: var(--header-text);
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    position: relative; /* For the toggle placement */
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.main-header h1 {
+    color: var(--header-text);
+    margin: 0;
 }
 
 .hero-pic {
@@ -52,99 +82,33 @@ header {
     box-shadow: var(--shadow);
 }
 
-/* 3. MODERN GRID (INDEX PAGE) */
-.roster-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 15px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+/* =========================================
+   4. THEME TOGGLE BUTTON
+   ========================================= */
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
 
-.dept-card {
-    background: var(--white);
-    color: var(--primary-maroon); /* Fixed variable name */
-    padding: 20px;
-    text-decoration: none;
-    text-align: center;
-    font-weight: bold;
-    border-radius: 12px;
-    border: 1px solid #ddd;
+#darkModeToggle {
+    background: transparent;
+    border: 1px solid var(--header-text);
+    color: var(--header-text);
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
     transition: var(--transition);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: var(--shadow);
 }
 
-.dept-card:hover {
-    background: var(--primary-maroon);
-    color: var(--white);
-    transform: translateY(-3px);
+#darkModeToggle:hover {
+    background: rgba(255, 255, 255, 0.1);
 }
 
-/* 4. ROSTER TABLES */
-.table-container {
-    overflow-x: auto;
-    padding: 20px;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    background: var(--white);
-}
-
-th, td {
-    padding: 12px;
-    border: 1px solid #ddd;
-    text-align: center;
-}
-
-th {
-    background-color: var(--primary-maroon); /* Fixed variable name */
-    color: var(--white);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 0.85rem;
-}
-
-tr:nth-child(even) {
-    background-color: var(--accent-grey); /* Using your grey variable */
-}
-
-/* 5. SPECIAL STYLES */
-.urology-special {
-    background-color: #000 !important;
-    color: #fff !important;
-    padding: 30px;
-    text-align: center;
-}
-
-.emergency-notice {
-    background: var(--emergency); /* Changed to your emergency red */
-    color: var(--white);
-    padding: 20px;
-    margin: 20px;
-    border-radius: 8px;
-    text-align: center;
-}
-
-/* 6. FOOTER */
-footer {
-    padding: 20px;
-    text-align: center;
-    background: #333;
-    color: var(--white);
-}
-
-/* MOBILE ADJUSTMENTS */
-@media (max-width: 600px) {
-    .main-header h1 { font-size: 1.2rem; }
-    .hero-pic img { height: 150px; }
-}
-
+/* =========================================
+   5. SEARCH & NAVIGATION (INDEX PAGE)
+   ========================================= */
 .search-container {
     padding: 20px;
     display: flex;
@@ -169,37 +133,139 @@ footer {
     width: 100%;
     padding: 12px 12px 12px 40px;
     border-radius: 25px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--border-color);
+    background: var(--card-bg);
+    color: var(--text-color);
     font-size: 1rem;
+    outline: none;
+}
+
+.roster-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .dept-card {
+    background: var(--card-bg);
+    color: var(--text-color);
+    padding: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 15px;
+    border: 1px solid var(--border-color);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    padding: 20px;
-    transition: transform 0.2s;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
 }
 
 .dept-card i {
-    font-size: 2rem;
-    margin-bottom: 10px;
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+    color: var(--accent-color);
 }
 
-.emergency-card {
-    border: 2px solid #B22222;
-    color: #B22222;
+.dept-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-color);
+}
+
+/* =========================================
+   6. TABLES (DEPARTMENT PAGES)
+   ========================================= */
+.table-container {
+    overflow-x: auto;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--card-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    box-shadow: var(--shadow);
+}
+
+th, td {
+    padding: 15px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+}
+
+th {
+    background-color: var(--header-bg);
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+tr:nth-child(even) {
+    background-color: var(--table-stripe);
+}
+
+/* Highlight Today's Row (JS Triggered) */
+tr.highlight-today {
+    background-color: #fff3cd !important;
+    color: #333 !important;
+    font-weight: bold;
+}
+
+/* =========================================
+   7. FOOTER & NOTICES
+   ========================================= */
+.emergency-notice {
+    background: var(--emergency);
+    color: white;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.quick-contact {
+    text-align: center;
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 800px;
 }
 
 .call-btn {
     display: inline-block;
-    background: #800020;
+    background: var(--accent-color);
     color: white;
-    padding: 15px 25px;
+    padding: 12px 24px;
     border-radius: 8px;
     text-decoration: none;
     margin: 10px;
     font-weight: bold;
+}
+
+footer {
+    padding: 30px;
+    text-align: center;
+    background: #1a1a1a;
+    color: #999;
+    margin-top: 50px;
+}
+
+/* =========================================
+   8. MOBILE RESPONSIVENESS
+   ========================================= */
+@media (max-width: 600px) {
+    .main-header h1 { font-size: 1.3rem; }
+    .hero-pic img { height: 180px; }
+    .roster-grid { grid-template-columns: 1fr; }
+    th, td { padding: 10px; font-size: 0.9rem; }
 }
