@@ -3,117 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Madadeni Rosters - Outpatients</title>
-    <link rel="stylesheet" href="/department.css">
+    <title>Outpatient Clinics - Madadeni & NPH</title>
+    <link rel="stylesheet" href="/style.css"> 
     <link rel="shortcut icon" href="/images/download.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/834304401a.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
     <header>
         <div class="main-header">
-            
-            <h1>Specialist Clinics and MOPD</h1>
-            <a href="/index.html" title="Home" class="icon-link"><i class="fa-solid fa-house"></i></a>
-
+            <div style="display: flex; align-items: center; gap: 20px;">
+                <a href="/index.html" title="Home" style="color: white; font-size: 1.5rem;"><i class="fa-solid fa-house"></i></a>
+                <h1>Specialist Clinics & MOPD</h1>
+            </div>
         </div>
+        
         <div class="hero-pic">
-            <img src="/images/opd-outpatient-department2.png" alt="a picture of a hospital Outpatient area">
-            <label for="month">Month:</label>
-            <input type="text" id="month" name="month" placeholder="March 2023">
-            
+            <img src="/images/opd-outpatient-department2.png" alt="Hospital Outpatient area">
+            <div style="margin-top: 15px;">
+                <label for="month" style="font-weight: bold;">Schedule Version:</label>
+                <input type="text" id="month" name="month" placeholder="March 2026" style="padding: 8px; border-radius: 5px; border: 1px solid #ccc;">
+            </div>
         </div>
     </header>
 
-    <main>
-        <h1>Madadeni Hospital</h1>
-<table>
-    <thead>
-      <tr>
-        <th>Clinic</th>
-        <th>Days of operation</th>
-        <th>Contact Number</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>MOPD </td>
-        <td>Mon-Fri</td>
-        <td>034 328 8137</td>
-      </tr>
-      <tr>
-        <td>Flu Clinic</td>
-        <td>Mon-Fri</td>
-        <td>034 328 8234</td>
-      </tr>
-      <tr>
-        <td>SOPD</td>
-        <td>Monday, Wednesday &amp; Thursday</td>
-        <td>034 328 8025</td>
-      </tr>
-      <tr>
-        <td>Uro OPD</td>
-        <td>Monday &amp;  Wednesday </td>
-        <td>034 328 8025</td>
-      </tr>
-      <tr>
-        <td>Ortho OPD</td>
-        <td>Tuesday </td>
-        <td>034 328 8025</td>
-      </tr>
-      <tr>
-        <td>Psych OPD </td>
-        <td>Mon-Fri</td>
-        <td>034 328 3987</td>
-      </tr>
-      <tr>
-        <td>Physiotherapy </td>
-        <td>Mon-Fri</td>
-        <td>034 328 8198</td>
-      </tr>
-      <tr>
-        <td>Occupational Therapy </td>
-        <td>Mon-Fri</td>
-        <td>034 328 5674</td>
-      </tr>
-      <tr>
-        <td>Psychology </td>
-        <td>Mon-Fri</td>
-        <td>034 328 9886</td>
-      </tr>
-      
-    </tbody>
-  </table>
-  <h1>Newcastle Provincial Hospital</h1>
-  <table>
-    <thead>
-      <tr>
-        <th>Clinic</th>
-        <th>Days of operation</th>
-        <th>Contact Number</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>OBGYN Specialist Clinic </td>
-        <td>Mon-Fri</td>
-        <td>034 324 8137</td>
-      </tr>
-      <tr>
-        <td>POPD</td>
-        <td>Mon-Fri</td>
-        <td>034 324 3567</td>
-      </tr>
-      <tr>
-        <td>TOP Clinic</td>
-        <td>Monday Mon-Fri</td>
-        <td>034 324 8025</td>
-      </tr>
-      <tr>
-      
-      
-    </tbody>
-  </table>
-  </main>
-  </body>
-  </html>
-  
+    <main class="table-container">
+        
+        <h2 style="color: var(--primary-maroon); border-bottom: 2px solid var(--primary-maroon); padding-bottom: 10px;">
+            <i class="fa-solid fa-hospital"></i> Madadeni Hospital Clinics
+        </h2>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Clinic / Service</th>
+                    <th>Days of Operation</th>
+                    <th>Contact Number</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>MOPD</strong></td><td>Mon - Fri</td><td><a href="tel:0343288137">034 328 8137</a></td></tr>
+                <tr><td>Flu Clinic</td><td>Mon - Fri</td><td><a href="tel:0343288234">034 328 8234</a></td></tr>
+                <tr><td>SOPD (Surgical)</td><td>Mon, Wed, Thu</td><td><a href="tel:0343288025">034 328 8025</a></td></tr>
+                <tr><td>Uro OPD (Urology)</td><td>Mon & Wed</td><td><a href="tel:0343288025">034 328 8025</a></td></tr>
+                <tr><td>Ortho OPD (Orthopaedics)</td><td>Tuesday</td><td><a href="tel:0343288025">034 328 8025</a></td></tr>
+                <tr><td>Psych OPD</td><td>Mon - Fri</td><td><a href="tel:0343283987">034 328 3987</a></td></tr>
+                <tr><td>Physiotherapy</td><td>Mon - Fri</td><td><a href="tel:0343288198">034 328 8198</a></td></tr>
+                <tr><td>Occupational Therapy</td><td>Mon - Fri</td><td><a href="tel:0343285674">034 328 5674</a></td></tr>
+                <tr><td>Psychology</td><td>Mon - Fri</td><td><a href="tel:0343289886">034 328 9886</a></td></tr>
+            </tbody>
+        </table>
+
+        <h2 style="color: var(--primary-maroon); border-bottom: 2px solid var(--primary-maroon); padding-bottom: 10px; margin-top: 50px;">
+            <i class="fa-solid fa-hospital-user"></i> Newcastle Provincial (NPH) Clinics
+        </h2>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Clinic / Service</th>
+                    <th>Days of Operation</th>
+                    <th>Contact Number</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>OBGYN Specialist</strong></td><td>Mon - Fri</td><td><a href="tel:0343248137">034 324 8137</a></td></tr>
+                <tr><td>POPD (Paediatrics)</td><td>Mon - Fri</td><td><a href="tel:0343243567">034 324 3567</a></td></tr>
+                <tr><td>TOP Clinic</td><td>Mon - Fri</td><td><a href="tel:0343248025">034 324 8025</a></td></tr>
+            </tbody>
+        </table>
+
+    </main>
+
+    <aside class="emergency-notice">
+        <p>
+            <strong>Note to Referrers:</strong> All specialist clinics require a pre-booked appointment via the contact numbers above. 
+            Urgent reviews must be discussed with the registrar or MO on call via switchboard.
+        </p>
+    </aside>
+
+    <footer>
+        <p>&copy; 2026 Madadeni & NPH Hospital Rosters</p>
+    </footer>
+
+</body>
+</html>

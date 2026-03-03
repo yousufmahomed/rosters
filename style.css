@@ -1,202 +1,146 @@
+:root {
+    /* Fixed Names */
+    --primary-maroon: #800020;
+    --white: #ffffff;
+    --bg-light: #f8f9fa;
+    --text-dark: #2d3436;
+    --accent-grey: #e9ecef;
+    --emergency: #d32f2f;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
 
 body {
-  background-color:  #F5F5F5;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  border: 5px solid #800020;
-  
-}
-
-
-
-/* Mobile styles */
-@media (max-width: 768px) {
-    header {
-      padding: 20px;
-      color: #333;
-      
-    }
-    .main-header {
-      background-color: #800020;
-      color: #f1f1f1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Times New Roman', Times, serif;
-    }
-  
-    .main-header h1 {
-      font-size: 1.5rem;
-      margin: 0;
-      margin-top: 10px;
-    }
-  
-    .fa-hospital {
-      font-size: 2rem;
-    }
-
-    .hero-pic img {
-      display: block;
-      max-width: 100%;
-      height: auto;
-      margin: 10px auto;
-      border-radius: 50px 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    }
-    
-    .nav-links {
-      display: flex;
-      flex-direction: column;
-      position: absolute;
-      top: 40px;
-      width: 100%;
-      background-color: transparent;
-      z-index: 1;
-      align-items: flex-start; /* or 'center' */
-    }
-    
-
-    .nav-links li {
-      display: block;
-      
-    }
-    .nav-links.show {
-      display: flex;
-      flex-direction: column;
-    }
-      .nav-links a {
-      display: block;
-      padding: 10px;
-      text-align: left;
-      color: #333;
-      font-size: 1.2rem;
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-    }
-
-    .nav-links a:hover {
-      background-color: #f1f1f1;
-      color: orangered;
-    }
-    .menu-icon {
-      display: block;
-      font-size: 2rem;
-      color: #fff;
-      text-align: right;
-      cursor: pointer;
-      padding: 20px;
-    }
-    footer {
-      display: none;
-    }
-    .mobile-only {
-      margin: 10px 10px;
-      padding: 10px;
-    }
-
-  }
-  
- /* Desktop styles */
-@media (min-width: 769px) {
-  header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    color: #333;
-  }
-  .main-header {
-    background-color: #800020;
-    color: #f1f1f1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    font-family: 'Times New Roman', Times, serif;
-  }
-  
-  .main-header h1 {
-    margin-right: 10px; /* Optional spacing between the icon and text */
-  }
-  
-  .fa-hospital {
-    font-size: 2rem;
-  }
-  
-
-  .hero-pic img {
-    display: block;
-    width: 100%;
-    max-width: 600px;
-    margin: 10px auto;
-    border-radius: 50px 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  .nav-links {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  .nav-links li {
-    margin: 0px 20px;
-  }
-  .nav-links a {
-    display: block;
-    padding: 10px;
-    text-align: center;
-    color: #333;
-    font-size: 1rem;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    transition: background-color 0.2s ease-in-out;
-  }
-  
-  .nav-links a:hover {
-    background-color: #f1f1f1;
-    color: orangered;
-  }
-  
-  .active {
-    text-decoration: underline;
-  }
-  .menu-icon {
-    display: none;
-  }
-  footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    font-family: 'Times New Roman', Times, serif;
-  }
-  
-  footer p {
     margin: 0;
-  }
-  
-  footer a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  footer a:hover {
-    text-decoration: underline;
-  }
-  .mobile-only {
-    display: none;
-  }
-  
+    padding: 0;
+    border: 5px solid var(--primary-maroon);
+    min-height: 100vh;
 }
 
-  
-  /* Shared styles */
-  nav {
-    position: relative;
-  }
-  
-  .menu-icon {
-    display: none;
-  }
-  
+/* 2. HEADER & HERO */
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+.main-header {
+    background-color: var(--primary-maroon); /* Fixed variable name */
+    color: var(--white);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.hero-pic {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.hero-pic img {
+    max-width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+}
+
+/* 3. MODERN GRID (INDEX PAGE) */
+.roster-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.dept-card {
+    background: var(--white);
+    color: var(--primary-maroon); /* Fixed variable name */
+    padding: 20px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow);
+}
+
+.dept-card:hover {
+    background: var(--primary-maroon);
+    color: var(--white);
+    transform: translateY(-3px);
+}
+
+/* 4. ROSTER TABLES */
+.table-container {
+    overflow-x: auto;
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background-color: var(--primary-maroon); /* Fixed variable name */
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+}
+
+tr:nth-child(even) {
+    background-color: var(--accent-grey); /* Using your grey variable */
+}
+
+/* 5. SPECIAL STYLES */
+.urology-special {
+    background-color: #000 !important;
+    color: #fff !important;
+    padding: 30px;
+    text-align: center;
+}
+
+.emergency-notice {
+    background: var(--emergency); /* Changed to your emergency red */
+    color: var(--white);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* 6. FOOTER */
+footer {
+    padding: 20px;
+    text-align: center;
+    background: #333;
+    color: var(--white);
+}
+
+/* MOBILE ADJUSTMENTS */
+@media (max-width: 600px) {
+    .main-header h1 { font-size: 1.2rem; }
+    .hero-pic img { height: 150px; }
+}

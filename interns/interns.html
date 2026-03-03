@@ -1,135 +1,199 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/interns/interns.css">
+    <title>Intern Directory - Madadeni & NPH</title>
+    <link rel="stylesheet" href="/style.css">
     <script src="https://kit.fontawesome.com/834304401a.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="/images/download.png" type="image/x-icon">
-    <title>interns List</title>
- 
-  </head>
-  <body>
-    <div style="background-color: #800020; color:antiquewhite" class="page-header">
-        <h1>Interns List</h1>
-        <a href="/index.html" title="Home" class="icon-link" style="color: antiquewhite;"><i class="fa-solid fa-house"></i></a>
-      </div>
-      
-      <div class="page-content">
-        <img src="/images/interns.jpg" alt="An illustration of a diverse group of doctors">
-      </div>
-      
-    <div id="search-container">
-      <input type="text" id="search-input" placeholder="Search for a doctor...">
-    </div>
-    <div id="doctors-container">
-      <div class="doctor-card">
-        <h3>Dr. Sizwe Nxumalo</h3>
-        <p>(082) 935-1234</p>
-      </div>
-      <div class="doctor-card">
-        <h3>Dr. Nomfundo Mabaso</h3>
-        <p>(082) 720-4532</p>
-      </div>
-      <div class="doctor-card">
-        <h3>Dr. Thabo Mbeki</h3>
-        <p>(082) 998-4332</p>
-      </div>
-      <div class="doctor-card">
-        <h3>Dr. Zinhle Dlamini</h3>
-        <p>(082) 824-9302</p>
-      </div>
-      <div class="doctor-card">
-        <h3>Dr. Siyabonga Mthembu</h3>
-        <p>(082) 465-9832</p>
-      </div>
-      <div class="doctor-card">
-        <h3>Dr. Nokuthula Ngwenya</h3>
-        <p>(082) 209-3274</p>
-      </div>
-      <div class="doctor-card">
-        <h3>Dr. Bongani Zulu</h3>
-        <p>(082) 755-3412</p>
-      </div>
-      <div class="doctor-card">
-        <h3>Dr. Lindiwe Mkhize</h3>
-        <p>(082) 431-7834</p>
-      </div>
-      <div class="doctor-card">
-        <h3>Dr. Sandile Nkosi</h3>
-        <p>(082) 334-2983</p>
-      </div>
-      <div class="doctor-card">
-        <h3>Dr. Ayanda Dube</h3>
-        <p>(082) 671-0453</p>
-      </div>
-      <div class="doctor-card">
-        <h3>Dr. Nompumelelo Ngcobo</h3>
-        <p>(082) 982-4392</p>
-      </div>
-      <div class="doctor-card">
-        <h3>Dr. Nomvelo Dlamini</h3>
-        <p>(082) 935-1234</p>
-      </div>
-      <div class="doctor-card">
-        <h3>Dr. Thabo Nkosi</h3>
-        <p>(082) 720-4532</p>
-      </div>
-      <div class="doctor-card">
-        <h3>Dr. Lerato Khumalo</h3>
-        <p>(082) 998-4332</p>
-      </div>
-      <div class="doctor-card">
-        <h3>Dr.Bongani Mthembu</h3>
-        <p>(082) 824-9302</p>
-      </div>
-      <div class="doctor-card">
-        <h3>Dr. Zinhle Mkhize</h3>
-        <p>(082) 465-9832</p>
-      </div>
-      <div class="doctor-card">
-        <h3>Dr. Sipho Ncube</h3>
-        <p>(082) 209-3274</p>
-      </div>
-      <div class="doctor-card">
-        <h3>Dr. Nokwanda Mabaso</h3>
-        <p>(082) 755-3412</p>
-      </div>
-      <div class="doctor-card">
-        <h3>Dr. Siyabonga Ngubane</h3>
-        <p>(082) 431-7834</p>
-      </div>
-      <div class="doctor-card">
-        <h3>Dr. Lindiwe Mthethwa</h3>
-        <p>(082) 334-2983</p>
-      </div>
-      <div class="doctor-card">
-        <h3>Dr. Vusi Malinga</h3>
-        <p>(082) 671-0453</p>
-      </div>
-      <div class="doctor-card">
-        <h3>Dr. Ayanda Zulu</h3>
-        <p>(082) 982-4392</p>
-      </div>
-      </div>
-      <script>
-                    
+    <style>
+        /* Specific tweaks for this page to ensure the search bar looks great */
+        #search-input:focus {
+            border-color: #ff4500 !important;
+            box-shadow: 0 0 8px rgba(255, 69, 0, 0.2);
+        }
+        .doctor-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--primary-maroon);
+            transition: transform 0.2s ease;
+        }
+        .doctor-card:hover {
+            transform: translateY(-5px);
+        }
+        .phone-link {
+            text-decoration: none;
+            color: #555;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .phone-link:hover {
+            color: var(--primary-maroon);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="main-header">
+            <div style="display: flex; align-items: center; gap: 20px;">
+                <a href="/index.html" title="Home" style="color: white; font-size: 1.5rem;"><i class="fa-solid fa-house"></i></a>
+                <h1>Intern Contact Directory</h1>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="hero-pic">
+            <img src="/images/interns.jpg" alt="Hospital Interns">
+        </div>
+
+        <section id="search-container" style="max-width: 600px; margin: 20px auto; padding: 0 20px;">
+            <div style="position: relative;">
+                <i class="fa-solid fa-magnifying-glass" style="position: absolute; left: 15px; top: 15px; color: #888;"></i>
+                <input type="text" id="search-input" placeholder="Start typing a name..." 
+                       style="width: 100%; padding: 12px 12px 12px 40px; border-radius: 25px; border: 2px solid var(--primary-maroon); font-size: 1rem; outline: none;">
+            </div>
+        </section>
+
+        <section id="doctors-container" class="roster-grid">
+            
+            <div class="doctor-card">
+                <h3>Dr. Sizwe Nxumalo</h3>
+                <a href="tel:0829351234" class="phone-link"><i class="fa-solid fa-phone"></i> (082) 935-1234</a>
+            </div>
+
+            <div class="doctor-card">
+                <h3>Dr. Nomfundo Mabaso</h3>
+                <a href="tel:0827204532" class="phone-link"><i class="fa-solid fa-phone"></i> (082) 720-4532</a>
+            </div>
+
+            <div class="doctor-card">
+                <h3>Dr. Thabo Mbeki</h3>
+                <a href="tel:0829984332" class="phone-link"><i class="fa-solid fa-phone"></i> (082) 998-4332</a>
+            </div>
+
+            <div class="doctor-card">
+                <h3>Dr. Zinhle Dlamini</h3>
+                <a href="tel:0828249302" class="phone-link"><i class="fa-solid fa-phone"></i> (082) 824-9302</a>
+            </div>
+
+            <div class="doctor-card">
+                <h3>Dr. Siyabonga Mthembu</h3>
+                <a href="tel:0824659832" class="phone-link"><i class="fa-solid fa-phone"></i> (082) 465-9832</a>
+            </div>
+
+            <div class="doctor-card">
+                <h3>Dr. Nokuthula Ngwenya</h3>
+                <a href="tel:0822093274" class="phone-link"><i class="fa-solid fa-phone"></i> (082) 209-3274</a>
+            </div>
+
+            <div class="doctor-card">
+                <h3>Dr. Bongani Zulu</h3>
+                <a href="tel:0827553412" class="phone-link"><i class="fa-solid fa-phone"></i> (082) 755-3412</a>
+            </div>
+
+            <div class="doctor-card">
+                <h3>Dr. Lindiwe Mkhize</h3>
+                <a href="tel:0824317834" class="phone-link"><i class="fa-solid fa-phone"></i> (082) 431-7834</a>
+            </div>
+
+            <div class="doctor-card">
+                <h3>Dr. Sandile Nkosi</h3>
+                <a href="tel:0823342983" class="phone-link"><i class="fa-solid fa-phone"></i> (082) 334-2983</a>
+            </div>
+
+            <div class="doctor-card">
+                <h3>Dr. Ayanda Dube</h3>
+                <a href="tel:0826710453" class="phone-link"><i class="fa-solid fa-phone"></i> (082) 671-0453</a>
+            </div>
+
+            <div class="doctor-card">
+                <h3>Dr. Nompumelelo Ngcobo</h3>
+                <a href="tel:0829824392" class="phone-link"><i class="fa-solid fa-phone"></i> (082) 982-4392</a>
+            </div>
+
+            <div class="doctor-card">
+                <h3>Dr. Nomvelo Dlamini</h3>
+                <a href="tel:0829351234" class="phone-link"><i class="fa-solid fa-phone"></i> (082) 935-1234</a>
+            </div>
+
+            <div class="doctor-card">
+                <h3>Dr. Thabo Nkosi</h3>
+                <a href="tel:0827204532" class="phone-link"><i class="fa-solid fa-phone"></i> (082) 720-4532</a>
+            </div>
+
+            <div class="doctor-card">
+                <h3>Dr. Lerato Khumalo</h3>
+                <a href="tel:0829984332" class="phone-link"><i class="fa-solid fa-phone"></i> (082) 998-4332</a>
+            </div>
+
+            <div class="doctor-card">
+                <h3>Dr. Bongani Mthembu</h3>
+                <a href="tel:0828249302" class="phone-link"><i class="fa-solid fa-phone"></i> (082) 824-9302</a>
+            </div>
+
+            <div class="doctor-card">
+                <h3>Dr. Zinhle Mkhize</h3>
+                <a href="tel:0824659832" class="phone-link"><i class="fa-solid fa-phone"></i> (082) 465-9832</a>
+            </div>
+
+            <div class="doctor-card">
+                <h3>Dr. Sipho Ncube</h3>
+                <a href="tel:0822093274" class="phone-link"><i class="fa-solid fa-phone"></i> (082) 209-3274</a>
+            </div>
+
+            <div class="doctor-card">
+                <h3>Dr. Nokwanda Mabaso</h3>
+                <a href="tel:0827553412" class="phone-link"><i class="fa-solid fa-phone"></i> (082) 755-3412</a>
+            </div>
+
+            <div class="doctor-card">
+                <h3>Dr. Siyabonga Ngubane</h3>
+                <a href="tel:0824317834" class="phone-link"><i class="fa-solid fa-phone"></i> (082) 431-7834</a>
+            </div>
+
+            <div class="doctor-card">
+                <h3>Dr. Lindiwe Mthethwa</h3>
+                <a href="tel:0823342983" class="phone-link"><i class="fa-solid fa-phone"></i> (082) 334-2983</a>
+            </div>
+
+            <div class="doctor-card">
+                <h3>Dr. Vusi Malinga</h3>
+                <a href="tel:0826710453" class="phone-link"><i class="fa-solid fa-phone"></i> (082) 671-0453</a>
+            </div>
+
+            <div class="doctor-card">
+                <h3>Dr. Ayanda Zulu</h3>
+                <a href="tel:0829824392" class="phone-link"><i class="fa-solid fa-phone"></i> (082) 982-4392</a>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Intern Directory | Madadeni & NPH Hospitals</p>
+    </footer>
+
+    <script>
         const searchInput = document.querySelector("#search-input");
         searchInput.addEventListener("keyup", function() {
             const searchValue = searchInput.value.toLowerCase();
             const doctorCards = document.querySelectorAll(".doctor-card");
             doctorCards.forEach(function(card) {
                 const doctorName = card.querySelector("h3").textContent.toLowerCase();
+                // We use display: flex because it's a grid item
                 if (doctorName.includes(searchValue)) {
-                card.style.display = "block";
+                    card.style.display = "block"; 
                 } else {
-                card.style.display = "none";
+                    card.style.display = "none";
                 }
             });
         });
-        
-
-      </script>
-  </body>
+    </script>
+</body>
 </html>
